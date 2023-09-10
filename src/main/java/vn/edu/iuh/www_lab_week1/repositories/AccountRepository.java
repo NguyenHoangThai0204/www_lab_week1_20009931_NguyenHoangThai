@@ -21,7 +21,31 @@ public class AccountRepository {
     public AccountRepository() throws Exception{
 
     }
-    public void insert(Account account) throws SQLException {
+    public boolean deleteAccount(String id) throws SQLException {
+        String sql="delete from account where account_id=?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, id);
+        ps.executeUpdate();
+        return true;
+    }
+    public boolean updateAccount(Account account) throws SQLException {
+        String sql ="update account set full_name=?," +
+                "password=?," +
+                "email=?," +
+                "phone=?," +
+                "status=? " +
+                "where account_id=?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, account.getFull_name());
+        ps.setString(2, account.getPassword());
+        ps.setString(3, account.getEmail());
+        ps.setString(4, account.getPhone());
+        ps.setInt(5, account.getStatus());
+        ps.setString(6, account.getAccount_id());
+        ps.executeUpdate();
+        return true;
+    }
+    public boolean insertAccount(Account account) throws SQLException {
         String sql ="insert into account values(?,?,?,?,?,?)";
         PreparedStatement ps = connection.prepareStatement(sql);
         ps.setString(1,account.getAccount_id());
@@ -31,6 +55,7 @@ public class AccountRepository {
         ps.setString(5, account.getPhone());
         ps.setInt(6, account.getStatus());
         ps.executeUpdate();
+        return true;
     }
 
     public List<Account> getAllAccount() throws Exception{

@@ -20,7 +20,36 @@ public class RoleRepository {
             throw new RuntimeException(e);
         }
     }
-
+    public boolean deleteRole(String id) throws SQLException {
+        String sql="delete from role where role_id=?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, id);
+        ps.executeUpdate();
+        return true;
+    }
+    public boolean updateRole(Role role) throws SQLException {
+        String sql ="update role set role_name=?, " +
+                "description=?, " +
+                "status=? " +
+                "where role_id=?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, role.getRole_name());
+        ps.setString(2, role.getDescription());
+        ps.setInt(3, role.getStatus());
+        ps.setString(4, role.getRole_id());
+        ps.executeUpdate();
+        return true;
+    }
+    public boolean insertRole(Role role) throws Exception{
+        String sql ="insert into role values(?,?,?,?)";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1,role.getRole_id());
+        ps.setString(2, role.getRole_name());
+        ps.setString(3, role.getDescription());
+        ps.setInt(4, role.getStatus());
+        ps.executeUpdate();
+        return true;
+    }
     public List<Role> getAllRole() throws SQLException {
         String sql ="select * from role";
         PreparedStatement ps = connection.prepareStatement(sql);
