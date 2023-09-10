@@ -4,27 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a87d85e-b3c6-41b0-9022-be7065193d85" name="Changes" comment="two">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/connection/Connect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/AccountResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/RoleResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="5a87d85e-b3c6-41b0-9022-be7065193d85" name="Changes" comment="lan 3">
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/GrantAccountResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/LoadData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/ControllerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/models/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/models/GrantAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/models/GrantAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/models/Logs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/models/Logs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/models/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/models/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/AccountRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/GrantAccessRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/GrantAccessRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/AccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/AccountResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +96,7 @@
       <recent name="D:\WWW\baiTap\www_lab_week1\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RoleResource">
+  <component name="RunManager" selected="Application.GrantAccountResource">
     <configuration name="AccountResource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -129,6 +118,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="vn.edu.iuh.www_lab_week1.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GrantAccountResource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.iuh.www_lab_week1.resources.GrantAccountResource" />
+      <module name="www_lab_week1.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vn.edu.iuh.www_lab_week1.resources.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -206,6 +208,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.GrantAccountResource" />
       <item itemvalue="Application.AccountServiceImpl" />
       <item itemvalue="Application.RoleResource" />
       <item itemvalue="Application.AccountResource" />
@@ -213,6 +216,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GrantAccountResource" />
         <item itemvalue="Application.RoleResource" />
         <item itemvalue="Application.AccountServiceImpl" />
         <item itemvalue="Application.AccountResource" />
@@ -229,7 +233,9 @@
       <updated>1694308041346</updated>
       <workItem from="1694308042491" duration="10082000" />
       <workItem from="1694324129873" duration="12709000" />
-      <workItem from="1694337345592" duration="275000" />
+      <workItem from="1694337345592" duration="3055000" />
+      <workItem from="1694340432082" duration="67000" />
+      <workItem from="1694346194124" duration="2570000" />
     </task>
     <task id="LOCAL-00001" summary="one">
       <option name="closed" value="true" />
@@ -255,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694309445457</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="lan 3">
+      <option name="closed" value="true" />
+      <created>1694337680442</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694337680442</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,15 +279,16 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="one" />
     <MESSAGE value="two" />
-    <option name="LAST_COMMIT_MESSAGE" value="two" />
+    <MESSAGE value="lan 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="lan 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/HelloServlet.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/GrantAccessRepository.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

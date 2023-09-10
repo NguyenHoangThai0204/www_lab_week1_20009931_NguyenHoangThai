@@ -26,14 +26,10 @@ public class HelloServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         try {
-            AccountRepository ac = new AccountRepository();
-            List<Account> all = ac.getAllAccount();
-
-            request.setAttribute("allAcc", all);
-
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/abcd");
-            dispatcher.forward(request, response);
-
+            PrintWriter out = response.getWriter();
+            out.println("<html><body>");
+            out.println("<h1>" + message + "</h1>");
+            out.println("</body></html>");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

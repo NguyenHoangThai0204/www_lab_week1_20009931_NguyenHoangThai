@@ -1,9 +1,21 @@
 package vn.edu.iuh.www_lab_week1.models;
 
-public class GrantAccess {
+import vn.edu.iuh.www_lab_week1.repositories.GrantAccessRepository;
+
+public class GrantAccess{
     private String role_id;
     private String account_id;
     private String note;
+
+    private Grant is_grant;
+
+    public Grant getIs_grant() {
+        return is_grant;
+    }
+
+    public void setIs_grant(Grant is_grant) {
+        this.is_grant = is_grant;
+    }
 
     @Override
     public String toString() {
@@ -11,18 +23,22 @@ public class GrantAccess {
                 "role_id='" + role_id + '\'' +
                 ", account_id='" + account_id + '\'' +
                 ", note='" + note + '\'' +
+                ", is_grant=" + is_grant +
                 '}';
+    }
+
+    public GrantAccess(String role_id, String account_id, String note, Grant is_grant) {
+        this.role_id = role_id;
+        this.account_id = account_id;
+        this.note = note;
+        this.is_grant = is_grant;
     }
 
     public String getRole_id() {
         return role_id;
     }
 
-    public GrantAccess(String role_id, String account_id, String note) {
-        this.role_id = role_id;
-        this.account_id = account_id;
-        this.note = note;
-    }
+
 
     public void setRole_id(String role_id) {
         this.role_id = role_id;
