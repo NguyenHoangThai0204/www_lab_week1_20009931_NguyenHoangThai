@@ -41,6 +41,17 @@ public class Logs {
         this.logout_time = logout_time;
     }
 
+    @Override
+    public String toString() {
+        return "Logs{" +
+                "id=" + id +
+                ", account_id='" + account_id + '\'' +
+                ", login_time=" + login_time +
+                ", logout_time=" + logout_time +
+                ", notes='" + notes + '\'' +
+                '}';
+    }
+
     public String getNotes() {
         return notes;
     }

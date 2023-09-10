@@ -5,6 +5,15 @@ public class GrantAccess {
     private String account_id;
     private String note;
 
+    @Override
+    public String toString() {
+        return "GrantAccess{" +
+                "role_id='" + role_id + '\'' +
+                ", account_id='" + account_id + '\'' +
+                ", note='" + note + '\'' +
+                '}';
+    }
+
     public String getRole_id() {
         return role_id;
     }

@@ -57,6 +57,18 @@ public class Account {
         this.email = email;
     }
 
+    @Override
+    public String toString() {
+        return "Account{" +
+                "account_id='" + account_id + '\'' +
+                ", full_name='" + full_name + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", status=" + status +
+                '}';
+    }
+
     public void setPhone(String phone) {
         this.phone = phone;
     }

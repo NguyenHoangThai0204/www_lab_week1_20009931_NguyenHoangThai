@@ -6,11 +6,14 @@ public class Role {
     private String description;
     private int status;
 
-    public Role(String role_id, String role_name, String description, int status) {
-        this.role_id = role_id;
-        this.role_name = role_name;
-        this.description = description;
-        this.status = status;
+    @Override
+    public String toString() {
+        return "Role{" +
+                "role_id='" + role_id + '\'' +
+                ", role_name='" + role_name + '\'' +
+                ", description='" + description + '\'' +
+                ", status=" + status +
+                '}';
     }
 
     public void setRole_id(String role_id) {
@@ -43,5 +46,12 @@ public class Role {
 
     public int getStatus() {
         return status;
+    }
+
+    public Role(String role_id, String role_name, String description, int status) {
+        this.role_id = role_id;
+        this.role_name = role_name;
+        this.description = description;
+        this.status = status;
     }
 }
