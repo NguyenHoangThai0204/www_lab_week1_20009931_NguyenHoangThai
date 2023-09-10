@@ -8,6 +8,15 @@ public class Account {
     private String phone;
     private int status;
 
+    public Account(String account_id, String full_name, String password, String email, String phone, int status) {
+        this.account_id = account_id;
+        this.full_name = full_name;
+        this.password = password;
+        this.email = email;
+        this.phone = phone;
+        this.status = status;
+    }
+
     public String getAccount_id() {
         return account_id;
     }

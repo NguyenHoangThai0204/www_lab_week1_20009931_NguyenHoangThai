@@ -4,6 +4,5 @@ public enum Grant {
     DIASABLE("0"),
     ENABLE("1");
     Grant(String grant){
-
     }
 }

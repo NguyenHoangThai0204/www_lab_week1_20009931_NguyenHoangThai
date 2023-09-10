@@ -5,4 +5,33 @@ public class GrantAccess {
     private String account_id;
     private String note;
 
+    public String getRole_id() {
+        return role_id;
+    }
+
+    public GrantAccess(String role_id, String account_id, String note) {
+        this.role_id = role_id;
+        this.account_id = account_id;
+        this.note = note;
+    }
+
+    public void setRole_id(String role_id) {
+        this.role_id = role_id;
+    }
+
+    public String getAccount_id() {
+        return account_id;
+    }
+
+    public void setAccount_id(String account_id) {
+        this.account_id = account_id;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
 }
