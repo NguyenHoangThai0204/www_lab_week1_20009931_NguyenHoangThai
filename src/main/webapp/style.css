@@ -1,6 +1,10 @@
 *{
     margin: 0;
     box-sizing: border-box;
+
+}
+.boydy{
+    border:1px solid blue;
 }
 #divBody{
     padding: 50px;
@@ -11,6 +15,8 @@
 #formLogIn{
     margin-top: 10px;
     text-align: center;
+    padding: 20px;
+    border:1px solid blue;
 }
 #formLogIn>input{
     margin-top: 15px;
@@ -21,4 +27,3 @@ h3{
     font-style: italic;
     font-size: 25px;
 }
-

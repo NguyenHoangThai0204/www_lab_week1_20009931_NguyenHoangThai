@@ -1,15 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%--<!DOCTYPE html>--%>
-<%--<html>--%>
-<%--<head>--%>
-<%--  <title>JSP - Hello World</title>--%>
-<%--</head>--%>
-<%--<body>--%>
-<%--<h1><%= "Hello World!" %></h1>--%>
-<%--<br/>--%>
-<%--<a href="hello-servlet">Hello Servlet</a>--%>
-<%--</body>--%>
-<%--</html>--%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,13 +10,12 @@
 <body>
 <div style="width: 100%;" >
     <div id="divBody">
-
         <div>
-            <form action="action" id="formLogIn">
+            <form action="login" id="formLogIn" style="border:1px solid blue; padding: 20px">
                 <h3>Đăng nhập tài khoản</h3>
                 <input type="text" placeholder="user"><br>
                 <input type="text" placeholder="password"><br>
-                <input type="submit" value="Login"></input><br>
+                <input type="submit" style="margin:15px auto ;width:30%; background-color: aqua; " value="Login"></input><br>
                 <a href="signin" style="margin:auto ; padding: 5px;">Sign in</a>
             </form>
         </div>
