@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a87d85e-b3c6-41b0-9022-be7065193d85" name="Changes" comment="lan 4">
+    <list default="true" id="5a87d85e-b3c6-41b0-9022-be7065193d85" name="Changes" comment="lan 5">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/ControllerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -68,7 +71,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/WWW/baiTap/demo2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Lap trinh WWW/hanhchinhvn-master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -90,7 +93,7 @@
       <recent name="D:\WWW\baiTap\www_lab_week1\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GrantAccountResource">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.12">
     <configuration name="AccountResource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -230,7 +233,12 @@
       <workItem from="1694337345592" duration="3055000" />
       <workItem from="1694340432082" duration="67000" />
       <workItem from="1694346194124" duration="3357000" />
-      <workItem from="1694354712411" duration="1932000" />
+      <workItem from="1694354712411" duration="2663000" />
+      <workItem from="1694387735499" duration="56000" />
+      <workItem from="1694408652259" duration="945000" />
+      <workItem from="1694415338543" duration="3544000" />
+      <workItem from="1694418936622" duration="3432000" />
+      <workItem from="1694430121123" duration="761000" />
     </task>
     <task id="LOCAL-00001" summary="one">
       <option name="closed" value="true" />
@@ -272,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694349494601</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="lan 5">
+      <option name="closed" value="true" />
+      <created>1694356668028</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694356668028</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +300,7 @@
     <MESSAGE value="two" />
     <MESSAGE value="lan 3" />
     <MESSAGE value="lan 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="lan 4" />
+    <MESSAGE value="lan 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="lan 5" />
   </component>
 </project>

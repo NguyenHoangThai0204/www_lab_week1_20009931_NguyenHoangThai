@@ -10,7 +10,7 @@ import jakarta.ws.rs.ApplicationPath;
 import vn.edu.iuh.www_lab_week1.models.Account;
 import vn.edu.iuh.www_lab_week1.repositories.AccountRepository;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet(name = "helloServlet", value = "/login")
 //@ApplicationPath("/api")
 //public class HelloServlet extends Application {
 //

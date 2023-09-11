@@ -10,6 +10,8 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+
 @WebServlet(name = "abc", value = "/abc")
 public class ControllerServlet extends HttpServlet {
     @Inject
@@ -18,19 +20,17 @@ public class ControllerServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doGet(req, resp);
         String action = req.getParameter("action");
+        AccountRepository accountRepository = null;
+        if (action.equals("login")){
 
-        if (action.equals("create_account")){
-            AccountRepository accountRepository = null;
-         //   accountRepository.insert(account);
         }
-        PrintWriter out = resp.getWriter();
-        out.println("<html><body>");
-        try {
-            out.println("<h1>" + accountRepository.getAllAccount().get(0).getFull_name() + "</h1>");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        if (action.equals("delete_account")){
+            try {
+                accountRepository.deleteAccount("R002");
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         }
-        out.println("</body></html>");
     }
 
     @Override
