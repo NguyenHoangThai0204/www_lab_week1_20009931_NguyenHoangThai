@@ -10,12 +10,7 @@ import jakarta.ws.rs.ApplicationPath;
 import vn.edu.iuh.www_lab_week1.models.Account;
 import vn.edu.iuh.www_lab_week1.repositories.AccountRepository;
 
-@WebServlet(name = "helloServlet", value = "/login")
-//@ApplicationPath("/api")
-//public class HelloServlet extends Application {
-//
-//}
-
+@WebServlet(name = "helloServlet", value = "/loginsadf")
 public class HelloServlet extends HttpServlet {
     private String message;
 
@@ -33,9 +28,7 @@ public class HelloServlet extends HttpServlet {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
     }
-
     public void destroy() {
     }
 }

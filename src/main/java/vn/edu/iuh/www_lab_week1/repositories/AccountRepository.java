@@ -6,10 +6,10 @@ import vn.edu.iuh.www_lab_week1.models.Account;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class AccountRepository {
     public static Connection connection;
-
     static {
         try {
             connection = Connect.getConnection();
@@ -17,7 +17,7 @@ public class AccountRepository {
             throw new RuntimeException(e);
         }
     }
-
+    private Object Optional;
     public AccountRepository() throws Exception{
 
     }
@@ -57,7 +57,28 @@ public class AccountRepository {
         ps.executeUpdate();
         return true;
     }
-
+    public Account login(String em, String pa) throws SQLException, ClassNotFoundException {
+        String sql ="select * from account where email = ? and password = ?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        try{
+            ps.setString(1, em);
+            ps.setString(2, pa);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()){
+                String accid = rs.getString(1);
+                String name = rs.getString(2);
+                String pass = rs.getString(3);
+                String email = rs.getString(4);
+                String phone = rs.getString(5);
+                int status = rs.getInt(6);
+                Account account = new Account(accid, name, pass, email, phone, status);
+                return account;
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
     public List<Account> getAllAccount() throws Exception{
         String sql="select * from account";
         PreparedStatement ps = connection.prepareStatement(sql);
