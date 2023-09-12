@@ -13,7 +13,7 @@
 <div id="divBody">
     <h1>Danh sách Role</h1><br>
     <table style="width: 100%;">
-        <tr>
+        <tr style="font-size: 20px">
             <th>Id</th>
             <th>Role name</th>
             <th>Description</th>
@@ -23,15 +23,16 @@
         <% List<Role> roleList;
             roleList = (List<Role>) request.getAttribute("listRole");
         for ( Role role: roleList ) {%>
-            <tr>
+            <tr class="trBody" style="font-size: 20px">
                 <td><%= role.getRole_id() %></td>
                 <td><%= role.getRole_name() %></td>
                 <td><%= role.getDescription() %></td>
                 <td><%= role.getStatus() %></td>
-                <td><a href="#">Sửa</a> | <a href="#">Xóa</a></td>
-            </tr>
+                <td><a href="#">update</a> | <a href="#">delete</a></td>
+            </tr><br>
         <%}%>
     </table>
+    <br><br><a href="" style="text-decoration: none;font-size: 20px;float: right;">Add Role</a>
 </div>
 </body>
 </html>

@@ -13,8 +13,8 @@
         <div>
             <form action="login?action=nextHome" method="GET" id="formLogIn" style="border:1px solid blue; padding: 20px">
                 <h3>Đăng nhập tài khoản</h3>
-                <input type="text" name="email" placeholder="Email"><br>
-                <input type="password" name="password" placeholder="password"><br><br>
+                <input type="text" name="email" value="thaidp" placeholder="Email"><br>
+                <input type="password" name="password" value="123" placeholder="password"><br><br>
                 <input type="hidden" name="action" value="nextHome">
                 <input type="submit" value="LogIn">
             </form>

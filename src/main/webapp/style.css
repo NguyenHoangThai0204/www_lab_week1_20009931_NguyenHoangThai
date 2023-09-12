@@ -27,6 +27,10 @@ h3{
     font-style: italic;
     font-size: 25px;
 }
-#formLogIn>a:hover{
+a:hover{
     color: brown;
+}
+table>.trBody:hover {
+    background-color: aqua;
+    cursor: pointer;
 }

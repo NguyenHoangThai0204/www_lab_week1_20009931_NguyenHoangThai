@@ -13,7 +13,7 @@
     <div id="divBody">
         <h1>Danh sách Account</h1><br>
         <table style="width: 100%;">
-            <tr>
+            <tr style="font-size: 20px">
                 <th>Id</th>
                 <th>Full name</th>
                 <th>Password</th>
@@ -25,19 +25,20 @@
             <%  List<Account> list;
                 list = (List<Account>) request.getAttribute("listAccount");
                 for ( Account account: list) {%>
-            <tr>
+            <tr class="trBody" style="font-size: 20px">
                 <td><%= account.getAccount_id() %></td>
                 <td><%= account.getFull_name() %></td>
                 <td><%= account.getPassword() %></td>
                 <td><%= account.getEmail() %></td>
                 <td><%= account.getPhone() %></td>
                 <td><%= account.getStatus() %></td>
-                <td><a href="#">Sửa</a> | <a href="#">Xóa</a></td>
-            </tr>
+                <td><a href="#">update</a> | <a href="#?deleAccId=account.getAccount_id()">delete</a></td>
+            </tr><br>
             <%
                 }
             %>
         </table>
+        <br><br><a href="" style="text-decoration: none;font-size: 20px;float: right;">Add Account</a>
     </div>
 </body>
 </html>

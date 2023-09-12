@@ -17,12 +17,11 @@ public class AccountRepository {
         String url = "jdbc:mariadb://localhost:3306/mydb?createDatabaseIfNotExist=true";
         connection = DriverManager.getConnection(url, "root", "20009931");
     }
-    public boolean deleteAccount(String id) throws SQLException {
+    public void deleteAccount(String id) throws SQLException {
         String sql="delete from account where account_id=?";
         PreparedStatement ps = connection.prepareStatement(sql);
         ps.setString(1, id);
         ps.executeUpdate();
-        return true;
     }
     public boolean updateAccount(Account account) throws SQLException {
         String sql ="update account set full_name=?," +
