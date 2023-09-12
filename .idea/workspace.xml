@@ -4,19 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a87d85e-b3c6-41b0-9022-be7065193d85" name="Changes" comment="lan 8">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/listAccount.jsp" afterDir="false" />
+    <list default="true" id="5a87d85e-b3c6-41b0-9022-be7065193d85" name="Changes" comment="lan 9">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/listRole.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/connection/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/connection/Connect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/ControllerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/resources/AccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/AccountResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/resources/GrantAccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/GrantAccountResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/resources/LoadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/LoadData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/resources/RoleResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/RoleResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/AccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/resources/AccountResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/GrantAccountResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/resources/GrantAccountResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/LoadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/resources/LoadData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/resources/RoleResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/resources/RoleResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/RoleRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/nhap.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/listAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listAccount.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +33,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -51,6 +56,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/listAccount.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -69,31 +77,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/WWW/on-gk&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/WWW/Tuan01/Tuan01",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="vn.edu.iuh.www_lab_week1" />
@@ -102,10 +110,23 @@
       <recent name="D:\WWW\baiTap\www_lab_week1\src\main\java\vn\edu\iuh\www_lab_week1" />
       <recent name="D:\WWW\baiTap\www_lab_week1\src\main\java" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WWW\baiTap\www_lab_week1\src\main\webapp" />
+    </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.12">
-    <configuration name="home.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/Gradle___vn_edu_iuh___www_lab_week1_1_0_SNAPSHOT_war__exploded_/home.jsp">
-      <method v="2" />
+    <configuration name="AccountResource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.iuh.www_lab_week1.resources.AccountResource" />
+      <module name="www_lab_week1.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vn.edu.iuh.www_lab_week1.resources.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="nhap.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/Gradle___vn_edu_iuh___www_lab_week1_1_0_SNAPSHOT_war__exploded_/nhap.jsp">
       <method v="2" />
@@ -329,7 +350,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.home.jsp" />
+      <item itemvalue="Application.AccountResource" />
       <item itemvalue="JavaScript Debug.nhap.jsp" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.12" />
       <item itemvalue="Tomcat Server.listAccount.jsp" />
@@ -338,11 +359,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AccountResource" />
         <item itemvalue="Tomcat Server.listAccount.jsp" />
         <item itemvalue="Tomcat Server.home.jsp" />
         <item itemvalue="Tomcat Server.nhap.jsp" />
         <item itemvalue="JavaScript Debug.nhap.jsp" />
-        <item itemvalue="JavaScript Debug.home.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -370,7 +391,9 @@
       <workItem from="1694454858339" duration="13000" />
       <workItem from="1694455201746" duration="83000" />
       <workItem from="1694475549656" duration="9115000" />
-      <workItem from="1694490101410" duration="2016000" />
+      <workItem from="1694490101410" duration="6519000" />
+      <workItem from="1694500418130" duration="7062000" />
+      <workItem from="1694531054161" duration="4337000" />
     </task>
     <task id="LOCAL-00001" summary="one">
       <option name="closed" value="true" />
@@ -444,7 +467,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694454805037</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="lan 9">
+      <option name="closed" value="true" />
+      <created>1694493103537</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1694493103538</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,6 +491,7 @@
     <MESSAGE value="lan 6" />
     <MESSAGE value="lan 7" />
     <MESSAGE value="lan 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="lan 8" />
+    <MESSAGE value="lan 9" />
+    <option name="LAST_COMMIT_MESSAGE" value="lan 9" />
   </component>
 </project>

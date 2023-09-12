@@ -1,5 +1,6 @@
 package vn.edu.iuh.www_lab_week1.repositories;
 
+import jakarta.persistence.EntityManager;
 import vn.edu.iuh.www_lab_week1.connection.Connect;
 import vn.edu.iuh.www_lab_week1.models.Account;
 
@@ -10,16 +11,11 @@ import java.util.Optional;
 
 public class AccountRepository {
     public static Connection connection;
-    static {
-        try {
-            connection = Connect.getConnection();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-    private Object Optional;
-    public AccountRepository() throws Exception{
 
+    public AccountRepository() throws Exception{
+        Class.forName("org.mariadb.jdbc.Driver");
+        String url = "jdbc:mariadb://localhost:3306/mydb?createDatabaseIfNotExist=true";
+        connection = DriverManager.getConnection(url, "root", "20009931");
     }
     public boolean deleteAccount(String id) throws SQLException {
         String sql="delete from account where account_id=?";
@@ -57,10 +53,10 @@ public class AccountRepository {
         ps.executeUpdate();
         return true;
     }
-    public Account loginAccount(String em, String pa) throws SQLException{
-        String sql ="select * from account where email = ? and password = ?";
-        PreparedStatement ps = connection.prepareStatement(sql);
+    public Optional<Account> loginAccount(String em, String pa) throws SQLException {
+        String sql ="select * from account where email=? and password=?";
         try{
+            PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, em);
             ps.setString(2, pa);
             ResultSet rs = ps.executeQuery();
@@ -71,12 +67,13 @@ public class AccountRepository {
                 String email = rs.getString(4);
                 String phone = rs.getString(5);
                 int status = rs.getInt(6);
-                return new Account(accid, name, pass, email, phone, status);
+                Account account= new Account(accid, name, pass, email, phone, status);
+                return Optional.of(account);
             }
         }catch (SQLException e){
             e.printStackTrace();
         }
-        return null;
+        return Optional.empty();
     }
     public List<Account> getAllAccount() throws Exception{
         String sql="select * from account";

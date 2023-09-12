@@ -12,8 +12,8 @@
         <h1>Chào mừng bạn đến với Account</h1><br>
         <table style="width: 100%;">
             <tr>
-                <th><a href="login?action=listAccount">Danh sách Product</a></th>
-                <th><a style="margin-top: 10px;" href="adsg">Danh sách Role</a></th>
+                <th><a style="margin-top: 10px;" href="login?action=listAccount">Danh sách Product</a></th>
+                <th><a style="margin-top: 10px;" href="login?action=listRole">Danh sách Role</a></th>
             </tr>
         </table>
     </div>

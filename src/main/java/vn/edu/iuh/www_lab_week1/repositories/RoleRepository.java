@@ -4,6 +4,7 @@ import org.mariadb.jdbc.Connection;
 import vn.edu.iuh.www_lab_week1.connection.Connect;
 import vn.edu.iuh.www_lab_week1.models.Role;
 
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,12 +14,10 @@ import java.util.List;
 public class RoleRepository {
     public static Connection connection;
 
-    static {
-        try {
-            connection = Connect.getConnection();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+    public RoleRepository() throws ClassNotFoundException, SQLException {
+        Class.forName("org.mariadb.jdbc.Driver");
+        String url = "jdbc:mariadb://localhost:3306/mydb?createDatabaseIfNotExist=true";
+        connection = (Connection) DriverManager.getConnection(url, "root", "20009931");
     }
     public boolean deleteRole(String id) throws SQLException {
         String sql="delete from role where role_id=?";

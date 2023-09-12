@@ -1,4 +1,4 @@
-package vn.edu.iuh.www_lab_week1.controllers.resources;
+package vn.edu.iuh.www_lab_week1.resources;
 
 import vn.edu.iuh.www_lab_week1.repositories.GrantAccessRepository;
 
