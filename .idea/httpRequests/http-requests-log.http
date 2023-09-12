@@ -1,0 +1,36 @@
+GET http://localhost:8080/Gradle___vn_edu_iuh___www_lab_week1_1_0_SNAPSHOT_war/api/account
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-10T132713.404.html
+
+###
+
+GET http://localhost:8080/Gradle___vn_edu_iuh___www_lab_week1_1_0_SNAPSHOT_war/api
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-10T132659.404.html
+
+###
+
+GET http://localhost:8080/Gradle___vn_edu_iuh___www_lab_week1_1_0_SNAPSHOT_war/api/account
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-10T132600.404.html
+
+###
+
+GET http://localhost:8080/Gradle___vn_edu_iuh___www_lab_week1_1_0_SNAPSHOT_war/api/account
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-10T132532.404.html
+
+###
+
