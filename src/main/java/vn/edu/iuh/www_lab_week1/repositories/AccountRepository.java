@@ -57,7 +57,7 @@ public class AccountRepository {
         ps.executeUpdate();
         return true;
     }
-    public Account login(String em, String pa) throws SQLException, ClassNotFoundException {
+    public Account loginAccount(String em, String pa) throws SQLException{
         String sql ="select * from account where email = ? and password = ?";
         PreparedStatement ps = connection.prepareStatement(sql);
         try{
@@ -71,8 +71,7 @@ public class AccountRepository {
                 String email = rs.getString(4);
                 String phone = rs.getString(5);
                 int status = rs.getInt(6);
-                Account account = new Account(accid, name, pass, email, phone, status);
-                return account;
+                return new Account(accid, name, pass, email, phone, status);
             }
         }catch (SQLException e){
             e.printStackTrace();

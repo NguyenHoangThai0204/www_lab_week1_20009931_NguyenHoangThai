@@ -3,20 +3,20 @@
     box-sizing: border-box;
 
 }
-.boydy{
+#boydy{
     border:1px solid blue;
 }
 #divBody{
     padding: 50px;
     margin-left: auto;
+    text-align: center;
     margin-right: auto;
-    width: 50%;
+    width: 60%;
 }
 #formLogIn{
     margin-top: 10px;
     text-align: center;
     padding: 20px;
-    border:1px solid blue;
 }
 #formLogIn>input{
     margin-top: 15px;

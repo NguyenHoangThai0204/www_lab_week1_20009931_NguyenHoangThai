@@ -1,4 +1,4 @@
-package vn.edu.iuh.www_lab_week1.resources;
+package vn.edu.iuh.www_lab_week1.controllers.resources;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
