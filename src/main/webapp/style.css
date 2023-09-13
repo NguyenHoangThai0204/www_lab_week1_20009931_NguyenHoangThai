@@ -7,11 +7,18 @@
     border:1px solid blue;
 }
 #divBody{
-    padding: 50px;
+    padding: 20px;
     margin-left: auto;
     text-align: center;
     margin-right: auto;
-    width: 60%;
+    width: 80%;
+}
+#divBody1{
+    padding: 20px;
+    margin-left: auto;
+    text-align: center;
+    margin-right: auto;
+    width: 40%;
 }
 #formLogIn{
     margin-top: 10px;
@@ -30,7 +37,113 @@ h3{
 a:hover{
     color: brown;
 }
-body>#divBody>table>.trBody:hover{
-    background-color: aqua;
+
+#divBodyAddAndUpdate{
+    padding: 50px;
+    margin-left: auto;
+    text-align: center;
+    margin-right: auto;
+    width: 100%;
+    background-color: rgb(207, 239, 239);
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Tạo khoảng cách giữa các dòng */
+}
+
+.title {
+    font-size: 25px;
+    width: 30%;
+}
+
+.input {
+    font-size: 25px;
+    padding: 6px;
+    width: 65%;
+}
+#divBodyAddAndUpdate>a:hover{
     cursor: pointer;
+    background-color: brown;
+}
+/* ------------------------------------ phần khung đăng nhập --------------------------------*/
+.butdangNhap{
+    width: 50%;
+    border: 1px solid black;
+    box-shadow: 0 0 20px rgb(65, 100, 225);
+    background-color: white;
+    margin: 10px auto;
+}
+.headerDN{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    padding: 25px;
+    font-weight: bold;
+    font-size: 25px;
+}
+.dangNhapCenter{
+    width: 100%;
+}
+.butdangNhap .formDN{
+    padding: 20px;
+    text-align: center;
+}
+.butdangNhap input{
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.butdangNhap>p{
+    margin: -15px 0 15px 0;
+    text-align: center;
+}
+.khungDN{
+    text-align: center;
+    margin-top: -20px;
+}
+.khungDN button {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    background-color: aqua;
+    border: 1px solid aqua;
+    width: 60%;
+}
+.khungDN button:hover {
+    background-color: rgb(13, 147, 147);
+    cursor: pointer;
+}
+.khungDN>p{
+    margin: 15px;
+}
+.footerDN{
+    text-align: center;
+    padding: 15px;
+    background-color: antiquewhite;
+    color: antiquewhite;
+}
+.footerDN a{
+    color: rgb(179, 116, 34);
+}
+.formDN>i{
+    left: 15px;
+}
+button.close {
+    padding: 10px;
+    margin-right: 6px;
+    background-color: red;
+}
+#myModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    z-index: 9999; /* Đảm bảo hiển thị phía trên tất cả các phần tử khác */
 }

@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 <body>
-<div id="divBody">
+<div id="divBody" style=" margin-top:10px;border: 1px solid blue; border-radius: 20px">
     <h1>Danh sách Role</h1><br>
     <table style="width: 100%;">
         <tr style="font-size: 20px">
@@ -33,7 +33,10 @@
             </tr><br>
         <%}%>
     </table>
-    <br><br><a href="" style="text-decoration: none;font-size: 20px;float: right;">Add Role</a>
+    <div style="text-align: right">
+        <br><br><a href="login?action=nextLayoutRole" style="margin-right: 60px;text-decoration: none;font-size: 25px;font-weight: bold; margin-bottom:5px;">Add Role</a>
+        <a href="login?action=nextHome" style="text-decoration: none;font-size: 25px;font-weight: bold; margin-bottom:5px;">Back</a>
+    </div>
 </div>
 </body>
 

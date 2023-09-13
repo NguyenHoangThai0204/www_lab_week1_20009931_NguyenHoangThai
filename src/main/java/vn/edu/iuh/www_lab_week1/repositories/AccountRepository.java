@@ -40,7 +40,7 @@ public class AccountRepository {
         ps.executeUpdate();
         return true;
     }
-    public boolean insertAccount(Account account) throws SQLException {
+    public void insertAccount(Account account) throws SQLException {
         String sql ="insert into account values(?,?,?,?,?,?)";
         PreparedStatement ps = connection.prepareStatement(sql);
         ps.setString(1,account.getAccount_id());
@@ -50,7 +50,6 @@ public class AccountRepository {
         ps.setString(5, account.getPhone());
         ps.setInt(6, account.getStatus());
         ps.executeUpdate();
-        return true;
     }
     public Optional<Account> loginAccount(String em, String pa) throws SQLException {
         String sql ="select * from account where email=? and password=?";
