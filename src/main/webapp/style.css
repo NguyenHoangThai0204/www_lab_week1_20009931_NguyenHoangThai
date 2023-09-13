@@ -30,7 +30,7 @@ h3{
 a:hover{
     color: brown;
 }
-table>.trBody:hover {
+body>#divBody>table>.trBody:hover{
     background-color: aqua;
     cursor: pointer;
 }

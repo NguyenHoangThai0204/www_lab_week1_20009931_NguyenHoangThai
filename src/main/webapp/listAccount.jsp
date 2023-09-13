@@ -10,8 +10,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="divBody">
-        <h1>Danh sách Account</h1><br>
+    <div id="divBody" >
+        <h1>Danh sách Account</h1>
         <table style="width: 100%;">
             <tr style="font-size: 20px">
                 <th>Id</th>
@@ -25,14 +25,14 @@
             <%  List<Account> list;
                 list = (List<Account>) request.getAttribute("listAccount");
                 for ( Account account: list) {%>
-            <tr class="trBody" style="font-size: 20px">
+            <tr class="trBody" style=" width: 100%;font-size: 20px">
                 <td><%= account.getAccount_id() %></td>
                 <td><%= account.getFull_name() %></td>
                 <td><%= account.getPassword() %></td>
                 <td><%= account.getEmail() %></td>
                 <td><%= account.getPhone() %></td>
                 <td><%= account.getStatus() %></td>
-                <td><a href="#">update</a> | <a href="#?deleAccId=account.getAccount_id()">delete</a></td>
+                <td><a href="#">update</a> | <a href="login?deleAccId=<%= account.getAccount_id() %>&amp;action=deleteAccount">delete</a></td></td>
             </tr><br>
             <%
                 }

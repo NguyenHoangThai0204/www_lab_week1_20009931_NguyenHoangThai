@@ -1,7 +1,6 @@
 package vn.edu.iuh.www_lab_week1.repositories;
 
 import org.mariadb.jdbc.Connection;
-import vn.edu.iuh.www_lab_week1.connection.Connect;
 import vn.edu.iuh.www_lab_week1.models.Role;
 
 import java.sql.DriverManager;
@@ -19,12 +18,11 @@ public class RoleRepository {
         String url = "jdbc:mariadb://localhost:3306/mydb?createDatabaseIfNotExist=true";
         connection = (Connection) DriverManager.getConnection(url, "root", "20009931");
     }
-    public boolean deleteRole(String id) throws SQLException {
+    public void deleteRole(String id) throws SQLException {
         String sql="delete from role where role_id=?";
         PreparedStatement ps = connection.prepareStatement(sql);
         ps.setString(1, id);
         ps.executeUpdate();
-        return true;
     }
     public boolean updateRole(Role role) throws SQLException {
         String sql ="update role set role_name=?, " +

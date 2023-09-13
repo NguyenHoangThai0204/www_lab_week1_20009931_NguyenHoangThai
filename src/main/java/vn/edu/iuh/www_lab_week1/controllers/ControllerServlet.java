@@ -24,6 +24,7 @@ public class ControllerServlet extends HttpServlet {
     private final RoleRepository roleRepository;
     private HttpServletRequest req;
     private HttpServletResponse resp;
+    //                get data
 
     {
         try {
@@ -39,39 +40,58 @@ public class ControllerServlet extends HttpServlet {
             throw new RuntimeException(e);
         }
     }
+    public List<Account> loadAccount(HttpServletRequest req, HttpServletResponse resp) throws Exception {
+        //                set data to jsp
+        List<Account> acccountList = accountRepository.getAllAccount();
+        req.setAttribute("listAccount", acccountList);
+        req.getRequestDispatcher("/listAccount.jsp")
+                .forward(req, resp);
+        return null;
+    }
+    public List<Role> loadRole(HttpServletRequest req, HttpServletResponse resp) throws SQLException, ServletException, IOException {
+        //                get data
+        List<Role> roleList = roleRepository.getAllRole();
+//                set data to jsp
+        req.setAttribute("listRole", roleList);
+        req.getRequestDispatcher("/listRole.jsp")
+                .forward(req,resp);
+        return null;
+    }
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
-        if (action.equals("nextHome")){
+        if (action.equals("listAccount")) {
             try {
-                logIn(req, resp);
-            } catch (SQLException e) {
+                loadAccount(req, resp);
+            } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         }
-        if (action.equals("listAccount")) {
+//                deleteAccount
+        if (action.equals("deleteAccount")){
+            String id = req.getParameter("deleAccId");
             try {
-//                get data
-                List<Account> acccountList = accountRepository.getAllAccount();
-//                set data to jsp
-                req.setAttribute("listAccount", acccountList);
-                req.getRequestDispatcher("/listAccount.jsp")
-                        .forward(req, resp);
+                accountRepository.deleteAccount(id);
+                loadAccount(req, resp);
             } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+//              deleteRole
+        if(action.equals("deleteRole")){
+            String id = req.getParameter("deleRoleId");
+            try {
+                roleRepository.deleteRole(id);
+                loadRole(req, resp);
+            }catch (Exception e){
                 throw new RuntimeException(e);
             }
         }
         if(action.equals("listRole")){
             try {
-//                get data
-                List<Role> roleList = roleRepository.getAllRole();
-//                set data to jsp
-                req.setAttribute("listRole", roleList);
-                req.getRequestDispatcher("/listRole.jsp")
-                        .forward(req,resp);
+                loadRole(req, resp);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
-
         }
     }
     private void logIn(HttpServletRequest req, HttpServletResponse resp ) throws ServletException, SQLException, IOException {
@@ -87,6 +107,13 @@ public class ControllerServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
+        if (action.equals("nextHome")){
+            try {
+                logIn(req, resp);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
 
     }
 }

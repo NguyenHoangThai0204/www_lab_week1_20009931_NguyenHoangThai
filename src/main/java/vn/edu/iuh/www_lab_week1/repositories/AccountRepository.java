@@ -1,7 +1,6 @@
 package vn.edu.iuh.www_lab_week1.repositories;
 
 import jakarta.persistence.EntityManager;
-import vn.edu.iuh.www_lab_week1.connection.Connect;
 import vn.edu.iuh.www_lab_week1.models.Account;
 
 import java.sql.*;
@@ -23,6 +22,7 @@ public class AccountRepository {
         ps.setString(1, id);
         ps.executeUpdate();
     }
+
     public boolean updateAccount(Account account) throws SQLException {
         String sql ="update account set full_name=?," +
                 "password=?," +

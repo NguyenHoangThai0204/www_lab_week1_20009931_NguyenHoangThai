@@ -8,12 +8,15 @@
     <title>Document</title>
 </head>
 <body>
+<script>
+    window.alert("Bạn đã đăng nhập thành công");
+</script>
     <div id="divBody">
         <h1>Chào mừng bạn đến với Account</h1><br>
         <table style="width: 100%;">
             <tr>
-                <th><a style="margin-top: 10px;" href="login?action=listAccount">Danh sách Product</a></th>
-                <th><a style="margin-top: 10px;" href="login?action=listRole">Danh sách Role</a></th>
+                <th><a methods="POST" style="margin-top: 10px;" href="login?action=listAccount">Danh sách Product</a></th>
+                <th><a methods="POST" style="margin-top: 10px;" href="login?action=listRole">Danh sách Role</a></th>
             </tr>
         </table>
     </div>

@@ -1,7 +1,6 @@
 package vn.edu.iuh.www_lab_week1.repositories;
 
 import org.jetbrains.annotations.NotNull;
-import vn.edu.iuh.www_lab_week1.connection.Connect;
 import vn.edu.iuh.www_lab_week1.models.Grant;
 import vn.edu.iuh.www_lab_week1.models.GrantAccess;
 
@@ -12,12 +11,10 @@ import java.util.List;
 public class GrantAccessRepository {
     public static Connection connection;
 
-    static {
-        try {
-            connection = Connect.getConnection();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+    public GrantAccessRepository() throws ClassNotFoundException, SQLException {
+        Class.forName("org.mariadb.jdbc.Driver");
+        String url = "jdbc:mariadb://localhost:3306/mydb?createDatabaseIfNotExist=true";
+        connection = (org.mariadb.jdbc.Connection) DriverManager.getConnection(url, "root", "20009931");
     }
     public static List<GrantAccess> getAllGranAScc() throws SQLException {
         String sql ="select * from grant_access";

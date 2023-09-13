@@ -11,7 +11,7 @@
 <div style="width: 100%;" >
     <div id="divBody">
         <div>
-            <form action="login?action=nextHome" method="GET" id="formLogIn" style="border:1px solid blue; padding: 20px">
+            <form action="login?action=nextHome" method="POST" id="formLogIn" style="border:1px solid blue; padding: 20px">
                 <h3>Đăng nhập tài khoản</h3>
                 <input type="text" name="email" value="thaidp" placeholder="Email"><br>
                 <input type="password" name="password" value="123" placeholder="password"><br><br>
