@@ -68,7 +68,11 @@ a:hover{
     cursor: pointer;
     background-color: brown;
 }
-/* ------------------------------------ phần khung đăng nhập --------------------------------*/
+input[readonly] {
+    background-color: #f0f0f0; /* Màu nền mờ đi */
+    color: #666; /* Màu văn bản mờ đi */
+}
+/* ------------------------------------ phần khung layout--------------------------------*/
 .butdangNhap{
     width: 50%;
     border: 1px solid black;

@@ -23,7 +23,7 @@ public class AccountRepository {
         ps.executeUpdate();
     }
 
-    public boolean updateAccount(Account account) throws SQLException {
+    public void updateAccount(Account account) throws SQLException {
         String sql ="update account set full_name=?," +
                 "password=?," +
                 "email=?," +
@@ -38,7 +38,6 @@ public class AccountRepository {
         ps.setInt(5, account.getStatus());
         ps.setString(6, account.getAccount_id());
         ps.executeUpdate();
-        return true;
     }
     public void insertAccount(Account account) throws SQLException {
         String sql ="insert into account values(?,?,?,?,?,?)";
@@ -72,6 +71,18 @@ public class AccountRepository {
             e.printStackTrace();
         }
         return Optional.empty();
+    }
+    public Account getAccountById(String id) throws Exception{
+        String sql="select * from account where account_id=?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, id);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()){
+            return new Account(rs.getString(1),rs.getString(2),rs.getString(3),
+                    rs.getString(4), rs.getString(5), rs.getInt(6));
+
+        }
+        return null;
     }
     public List<Account> getAllAccount() throws Exception{
         String sql="select * from account";

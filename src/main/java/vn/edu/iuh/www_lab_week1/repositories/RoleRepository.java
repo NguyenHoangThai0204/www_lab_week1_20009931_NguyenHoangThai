@@ -24,7 +24,7 @@ public class RoleRepository {
         ps.setString(1, id);
         ps.executeUpdate();
     }
-    public boolean updateRole(Role role) throws SQLException {
+    public void updateRole(Role role) throws SQLException {
         String sql ="update role set role_name=?, " +
                 "description=?, " +
                 "status=? " +
@@ -35,7 +35,6 @@ public class RoleRepository {
         ps.setInt(3, role.getStatus());
         ps.setString(4, role.getRole_id());
         ps.executeUpdate();
-        return true;
     }
     public void insertRole(Role role) throws Exception{
         String sql ="insert into role values(?,?,?,?)";
@@ -58,5 +57,18 @@ public class RoleRepository {
             list.add(role);
         }
         return list;
+    }
+    public Role getRoleById(String id) throws SQLException {
+        String sql ="select * from role where role_id=?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, id);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()){
+            return new Role(rs.getString(1), rs.getString(2),
+                    rs.getString(3),
+                    rs.getInt(4));
+
+        }
+        return null;
     }
 }

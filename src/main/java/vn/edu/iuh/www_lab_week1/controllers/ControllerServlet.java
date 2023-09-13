@@ -1,6 +1,5 @@
 package vn.edu.iuh.www_lab_week1.controllers;
 
-import jakarta.inject.Inject;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.annotation.WebServlet;
 import vn.edu.iuh.www_lab_week1.models.Account;
@@ -90,6 +89,27 @@ public class ControllerServlet extends HttpServlet {
         roleRepository.insertRole(role);
         loadRole(req, resp);
     }
+//  -------------------------------    Update Account, Role       -----------------------------------------
+    public void upDateAccount( HttpServletRequest req, HttpServletResponse resp ) throws Exception {
+        String id = req.getParameter("idAccount");
+        String name = req.getParameter("nameAcc");
+        String pass = req.getParameter("passAcc");
+        String email = req.getParameter("email");
+        String phone = req.getParameter("phone");
+        int status = Integer.valueOf(req.getParameter("status"));
+        Account acc = new Account(id, name, pass, email, phone, status);
+        accountRepository.updateAccount(acc);
+        loadAccount(req, resp);
+    }
+    public void upDateRole( HttpServletRequest req, HttpServletResponse resp) throws Exception {
+        String id = req.getParameter("idRole");
+        String name = req.getParameter("nameRole");
+        String des = req.getParameter("desRole");
+        int sta = Integer.valueOf(req.getParameter("statusRole"));
+        Role role = new Role(id,name, des, sta);
+        roleRepository.updateRole(role);
+        loadRole(req, resp);
+    }
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
 //  --------------------------------         print list        --------------------------------------------
@@ -109,14 +129,14 @@ public class ControllerServlet extends HttpServlet {
         }
 //  -------------------------------       add account, add role        ------------------------------------
         if(action.equals("nextLayoutAcc")){
-            req.getRequestDispatcher("/showAccountUpdateAndAdd.jsp")
+            req.getRequestDispatcher("/showAccountAdd.jsp")
                     .forward(req,resp);
         }
         if(action.equals("nextLayoutRole")){
-            req.getRequestDispatcher("/showRoleUpdateAndAdd.jsp")
+            req.getRequestDispatcher("/showRoleAdd.jsp")
                     .forward(req, resp);
         }
-//  ------------------------------      deleteAccount, deleteRole         ----------------------------------
+//  ------------------------------      deleteAccount, deleteRole      --------------------------------------
         if (action.equals("deleteAccount")){
             String idDe = req.getParameter("deleAccId");
             try {
@@ -132,6 +152,30 @@ public class ControllerServlet extends HttpServlet {
                 roleRepository.deleteRole(idDeRole);
                 loadRole(req, resp);
             }catch (Exception e){
+                throw new RuntimeException(e);
+            }
+        }
+//  ------------------------------  updateAccount, updateRole     -------------------------------
+        if (action.equals("nextLayoutUpdateAccount")){
+            String idUpAcc = req.getParameter("upDateAccID");
+            try {
+                Account account = accountRepository.getAccountById(idUpAcc);
+                req.setAttribute("upAcc", account);
+                req.getRequestDispatcher("/showAccountUpdate.jsp")
+                        .forward(req, resp);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+
+        }
+        if(action.equals("nextLayoutUpdateRole")){
+            String idUpRole = req.getParameter("upDateRoleId");
+            try {
+                Role role = roleRepository.getRoleById(idUpRole);
+                req.setAttribute("upRole", role);
+                req.getRequestDispatcher("/showRoleUpdate.jsp")
+                        .forward(req, resp);
+            } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
         }
@@ -160,6 +204,19 @@ public class ControllerServlet extends HttpServlet {
                 throw new RuntimeException(e);
             }
         }
-
+        if(action.equals("upDateRole")){
+            try {
+                upDateRole(req,resp);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+        if(action.equals("upDateAccount")){
+            try {
+                upDateAccount(req,resp);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }

@@ -32,7 +32,7 @@
                 <td><%= account.getEmail() %></td>
                 <td><%= account.getPhone() %></td>
                 <td><%= account.getStatus() %></td>
-                <td><a href="#">update</a> | <a href="login?deleAccId=<%= account.getAccount_id() %>&amp;action=deleteAccount">delete</a></td></td>
+                <td><a href="login?upDateAccID=<%= account.getAccount_id() %>&amp;action=nextLayoutUpdateAccount">update</a> | <a href="login?deleAccId=<%= account.getAccount_id() %>&amp;action=deleteAccount">delete</a></td></td>
             </tr><br>
             <%
                 }

@@ -29,7 +29,7 @@
                 <td><%= role.getRole_name() %></td>
                 <td><%= role.getDescription() %></td>
                 <td><%= role.getStatus() %></td>
-                <td><a href="#">update</a> | <a href="login?deleRoleId=<%=role.getRole_id()%>&amp;action=deleteRole">delete</a></td>
+                <td><a href="login?upDateRoleId=<%=role.getRole_id()%>&amp;action=nextLayoutUpdateRole">update</a> | <a href="login?deleRoleId=<%=role.getRole_id()%>&amp;action=deleteRole">delete</a></td>
             </tr><br>
         <%}%>
     </table>
