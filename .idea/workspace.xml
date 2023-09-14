@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a87d85e-b3c6-41b0-9022-be7065193d85" name="Changes" comment="lan 13: finshed CRUD Account, Role">
+    <list default="true" id="5a87d85e-b3c6-41b0-9022-be7065193d85" name="Changes" comment="lan 14: finshed all backAgain">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/backGroup.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/ControllerServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/listAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listAccount.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/listRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listRole.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/showAccountAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showAccountAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/showAccountUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showAccountUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/showRoleAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showRoleAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/showRoleUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showRoleUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -425,7 +433,9 @@
       <workItem from="1694581908340" duration="9699000" />
       <workItem from="1694601900711" duration="19766000" />
       <workItem from="1694668349123" duration="592000" />
-      <workItem from="1694676220590" duration="2801000" />
+      <workItem from="1694676220590" duration="3085000" />
+      <workItem from="1694686544593" duration="351000" />
+      <workItem from="1694694822993" duration="6357000" />
     </task>
     <task id="LOCAL-00001" summary="one">
       <option name="closed" value="true" />
@@ -563,7 +573,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694623226428</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="lan 14: finshed all backAgain">
+      <option name="closed" value="true" />
+      <created>1694679305904</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1694679305904</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,18 +604,10 @@
     <MESSAGE value="lan 11: finshed Delete" />
     <MESSAGE value="lan 12: finshed Add" />
     <MESSAGE value="lan 13: finshed CRUD Account, Role" />
-    <option name="LAST_COMMIT_MESSAGE" value="lan 13: finshed CRUD Account, Role" />
+    <MESSAGE value="lan 14: finshed all backAgain" />
+    <option name="LAST_COMMIT_MESSAGE" value="lan 14: finshed all backAgain" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/ControllerServlet.java</url>
-          <line>200</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
         <watch expression="action.value[2]" />

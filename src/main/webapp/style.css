@@ -3,15 +3,13 @@
     box-sizing: border-box;
 
 }
-#boydy{
-    border:1px solid blue;
-}
 #divBody{
     padding: 20px;
     margin-left: auto;
     text-align: center;
     margin-right: auto;
     width: 80%;
+
 }
 #divBody1{
     padding: 20px;

@@ -8,11 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-<div style="width: 80%; border-radius: 20px; margin: auto" >
+<div style="width: 80%;border-radius: 20px; margin: auto" >
     <div id="divBody1">
-            <form action="login?action=nextHome" method="POST" id="formLogIn" style="border:1px solid blue; padding: 20px">
+            <form action="login?action=nextHome" method="POST" id="formLogIn" style="background-color: #effcfc;border-radius: 25px;border:1px solid #effcfc; padding: 20px">
                 <h3>Đăng nhập tài khoản</h3>
-                <input type="text" name="email" value="thaidp" placeholder="Email"><br>
+                <input type="text" name="accId" value="AC001" placeholder="AccountId"><br>
                 <input type="password" name="password" value="123" placeholder="password"><br><br>
                 <input type="hidden" name="action" value="nextHome">
                 <input type="submit" style="background-color: aqua;padding: 5px; border: 1px solid aqua;" value="LogIn">

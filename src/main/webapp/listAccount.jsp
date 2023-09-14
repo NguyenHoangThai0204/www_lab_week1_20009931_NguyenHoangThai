@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="divBody" style=" margin-top:10px;border: 1px solid blue; border-radius: 20px">
+    <div id="divBody" style="background-color: #effcfc; margin-top:10px;border: 1px solid blue; border-radius: 20px">
         <h1>Danh sách Account</h1>
         <table style="width: 100%;">
             <tr style="font-size: 20px">

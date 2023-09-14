@@ -59,33 +59,39 @@ public class ControllerServlet extends HttpServlet {
         return null;
     }
 //  -----------------------------------------  Log in ------------------------------------------------
-    private void logIn(HttpServletRequest req, HttpServletResponse resp ) throws ServletException, SQLException, IOException {
-        String e = req.getParameter("email");
+    private void logIn(HttpServletRequest req, HttpServletResponse resp ) throws Exception {
+        String e = req.getParameter("accId");
         String p = req.getParameter("password");
 //        nhận giá trị session cố định
         HttpSession session = req.getSession();
-        session.setAttribute("emailLogin", e);
+        session.setAttribute("idLogin", e);
         session.setAttribute("passwordLogin", p);
 
         String link="/index.jsp";
         if (accountRepository.loginAccount(e, p).isPresent()) {
             link="/home.jsp";
+            Account account = accountRepository.getAccountById(e);
+            req.setAttribute("upAccHome", account);
         }
         RequestDispatcher rd = req.getRequestDispatcher(link);
         rd.forward(req, resp);
+
+
     }
-    private void backHomeFrom(HttpServletRequest req, HttpServletResponse resp) throws SQLException, ServletException, IOException {
+    private void backHomeFrom(HttpServletRequest req, HttpServletResponse resp) throws Exception {
         HttpSession session = req.getSession();
-        String e = (String) session.getAttribute("emailLogin");
+        String e = (String) session.getAttribute("idLogin");
         String p = (String) session.getAttribute("passwordLogin");
         String link = null;
         if (accountRepository.loginAccount(e, p).isPresent()) {
             link="/home.jsp";
+            Account account = accountRepository.getAccountById(e);
+            req.setAttribute("upAccHome", account);
         }
         RequestDispatcher rd = req.getRequestDispatcher(link);
         rd.forward(req, resp);
     }
-//    -------------------------------- addAccount, addRole       ------------------------------------------------
+//    -------------------------------- addAccount, addRole       -------------------------------------------------------
     public void addAccount( HttpServletRequest req, HttpServletResponse resp ) throws Exception {
         String id = req.getParameter("idAccount");
         String name = req.getParameter("nameAcc");
@@ -106,7 +112,7 @@ public class ControllerServlet extends HttpServlet {
         roleRepository.insertRole(role);
         loadRole(req, resp);
     }
-//  -------------------------------    Update Account, Role       -----------------------------------------
+//  -------------------------------    Update Account, Role       -------------------------------------------------------
     public void upDateAccount( HttpServletRequest req, HttpServletResponse resp ) throws Exception {
         String id = req.getParameter("idAccount");
         String name = req.getParameter("nameAcc");
@@ -127,6 +133,7 @@ public class ControllerServlet extends HttpServlet {
         roleRepository.updateRole(role);
         loadRole(req, resp);
     }
+//  --------------------------------------------------------------------------------------------------------------------
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
 //  --------------------------------         print list        --------------------------------------------
@@ -183,7 +190,6 @@ public class ControllerServlet extends HttpServlet {
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
-
         }
         if(action.equals("nextLayoutUpdateRole")){
             String idUpRole = req.getParameter("upDateRoleId");
@@ -196,10 +202,13 @@ public class ControllerServlet extends HttpServlet {
                 throw new RuntimeException(e);
             }
         }
+//  -------------------------------   next home from list -----------------------------------------------
         if (action.equals("nextHomeFromList")){
             try {
                 backHomeFrom(req, resp);
             } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         }
@@ -211,6 +220,8 @@ public class ControllerServlet extends HttpServlet {
             try {
                 logIn(req, resp);
             } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         }

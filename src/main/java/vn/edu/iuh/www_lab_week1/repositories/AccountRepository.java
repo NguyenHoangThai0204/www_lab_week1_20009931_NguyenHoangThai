@@ -51,7 +51,7 @@ public class AccountRepository {
         ps.executeUpdate();
     }
     public Optional<Account> loginAccount(String em, String pa) throws SQLException {
-        String sql ="select * from account where email=? and password=?";
+        String sql ="select * from account where account_id=? and password=?";
         try{
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, em);
