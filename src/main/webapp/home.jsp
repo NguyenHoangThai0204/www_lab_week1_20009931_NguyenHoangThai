@@ -12,8 +12,8 @@
         <h1>Chào mừng bạn đến với Account</h1><br>
         <table style="width: 100%;">
             <tr>
-                <th><a methods="POST" style="margin-top: 10px;" href="login?action=listAccount">Danh sách Account</a></th>
-                <th><a methods="POST" style="margin-top: 10px;" href="login?action=listRole">Danh sách Role</a></th>
+                <th><a methods="POST" style="margin-top: 10px;font-size: 25px" href="login?action=listAccount">Danh sách Account</a></th>
+                <th><a methods="POST" style="margin-top: 10px;font-size: 25px" href="login?action=listRole">Danh sách Role</a></th>
             </tr>
         </table>
     </div>

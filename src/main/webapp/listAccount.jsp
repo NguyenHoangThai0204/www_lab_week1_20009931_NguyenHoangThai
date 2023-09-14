@@ -41,7 +41,7 @@
         <div style="text-align: right">
             <br><br>
             <a href="login?action=nextLayoutAcc" style="margin-right: 60px;text-decoration: none;font-size: 25px;font-weight: bold; margin-bottom:5px;">Add Account</a>
-            <a href="login?action=nextHome" style="text-decoration: none;font-size: 25px;font-weight: bold; margin-bottom:5px;">Back</a>
+            <a methods="POST" href="login?action=nextHomeFromList" style="text-decoration: none;font-size: 25px;font-weight: bold; margin-bottom:5px;">Back</a>
         </div>
     </div>
 </body>

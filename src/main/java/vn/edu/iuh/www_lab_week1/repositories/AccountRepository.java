@@ -14,7 +14,7 @@ public class AccountRepository {
     public AccountRepository() throws Exception{
         Class.forName("org.mariadb.jdbc.Driver");
         String url = "jdbc:mariadb://localhost:3306/mydb?createDatabaseIfNotExist=true";
-        connection = DriverManager.getConnection(url, "root", "20009931");
+        connection = DriverManager.getConnection( url, "root", "20009931");
     }
     public void deleteAccount(String id) throws SQLException {
         String sql="delete from account where account_id=?";

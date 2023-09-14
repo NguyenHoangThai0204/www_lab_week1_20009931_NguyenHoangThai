@@ -2,6 +2,7 @@ package vn.edu.iuh.www_lab_week1.controllers;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpSession;
 import vn.edu.iuh.www_lab_week1.models.Account;
 import vn.edu.iuh.www_lab_week1.models.Role;
 import vn.edu.iuh.www_lab_week1.repositories.AccountRepository;
@@ -61,7 +62,23 @@ public class ControllerServlet extends HttpServlet {
     private void logIn(HttpServletRequest req, HttpServletResponse resp ) throws ServletException, SQLException, IOException {
         String e = req.getParameter("email");
         String p = req.getParameter("password");
+//        nhận giá trị session cố định
+        HttpSession session = req.getSession();
+        session.setAttribute("emailLogin", e);
+        session.setAttribute("passwordLogin", p);
+
         String link="/index.jsp";
+        if (accountRepository.loginAccount(e, p).isPresent()) {
+            link="/home.jsp";
+        }
+        RequestDispatcher rd = req.getRequestDispatcher(link);
+        rd.forward(req, resp);
+    }
+    private void backHomeFrom(HttpServletRequest req, HttpServletResponse resp) throws SQLException, ServletException, IOException {
+        HttpSession session = req.getSession();
+        String e = (String) session.getAttribute("emailLogin");
+        String p = (String) session.getAttribute("passwordLogin");
+        String link = null;
         if (accountRepository.loginAccount(e, p).isPresent()) {
             link="/home.jsp";
         }
@@ -175,6 +192,13 @@ public class ControllerServlet extends HttpServlet {
                 req.setAttribute("upRole", role);
                 req.getRequestDispatcher("/showRoleUpdate.jsp")
                         .forward(req, resp);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        if (action.equals("nextHomeFromList")){
+            try {
+                backHomeFrom(req, resp);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }

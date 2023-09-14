@@ -35,7 +35,7 @@
     </table>
     <div style="text-align: right">
         <br><br><a href="login?action=nextLayoutRole" style="margin-right: 60px;text-decoration: none;font-size: 25px;font-weight: bold; margin-bottom:5px;">Add Role</a>
-        <a href="login?action=nextHome" style="text-decoration: none;font-size: 25px;font-weight: bold; margin-bottom:5px;">Back</a>
+        <a methods="post" href="login?action=nextHomeFromList" style="text-decoration: none;font-size: 25px;font-weight: bold; margin-bottom:5px;">Back</a>
     </div>
 </div>
 </body>
