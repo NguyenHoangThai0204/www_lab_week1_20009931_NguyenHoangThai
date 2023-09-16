@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a87d85e-b3c6-41b0-9022-be7065193d85" name="Changes" comment="lan 14: finshed all backAgain">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/backGroup.jpg" afterDir="false" />
+    <list default="true" id="5a87d85e-b3c6-41b0-9022-be7065193d85" name="Changes" comment="lan 15: finished information">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/listGrantAccount.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/controllers/ControllerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/models/Grant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/models/GrantAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/models/GrantAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/GrantAccessRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/www_lab_week1/repositories/GrantAccessRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/backGroup.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/listAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listAccount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/listRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listRole.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/showAccountAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showAccountAdd.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/showAccountUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showAccountUpdate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/showRoleAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showRoleAdd.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/showRoleUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showRoleUpdate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -435,7 +431,9 @@
       <workItem from="1694668349123" duration="592000" />
       <workItem from="1694676220590" duration="3085000" />
       <workItem from="1694686544593" duration="351000" />
-      <workItem from="1694694822993" duration="6357000" />
+      <workItem from="1694694822993" duration="7167000" />
+      <workItem from="1694822554686" duration="535000" />
+      <workItem from="1694823107438" duration="1728000" />
     </task>
     <task id="LOCAL-00001" summary="one">
       <option name="closed" value="true" />
@@ -581,7 +579,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694679305904</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="lan 15: finished information">
+      <option name="closed" value="true" />
+      <created>1694701244563</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1694701244563</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +611,8 @@
     <MESSAGE value="lan 12: finshed Add" />
     <MESSAGE value="lan 13: finshed CRUD Account, Role" />
     <MESSAGE value="lan 14: finshed all backAgain" />
-    <option name="LAST_COMMIT_MESSAGE" value="lan 14: finshed all backAgain" />
+    <MESSAGE value="lan 15: finished information" />
+    <option name="LAST_COMMIT_MESSAGE" value="lan 15: finished information" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

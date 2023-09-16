@@ -4,12 +4,14 @@ import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpSession;
 import vn.edu.iuh.www_lab_week1.models.Account;
+import vn.edu.iuh.www_lab_week1.models.GrantAccess;
 import vn.edu.iuh.www_lab_week1.models.Role;
 import vn.edu.iuh.www_lab_week1.repositories.AccountRepository;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import vn.edu.iuh.www_lab_week1.repositories.GrantAccessRepository;
 import vn.edu.iuh.www_lab_week1.repositories.RoleRepository;
 
 import java.io.IOException;
@@ -22,10 +24,17 @@ public class ControllerServlet extends HttpServlet {
 
     private final AccountRepository accountRepository;
     private final RoleRepository roleRepository;
+    private final GrantAccessRepository grantAccessRepository;
     private HttpServletRequest req;
     private HttpServletResponse resp;
     //                get data
-
+    {
+        try {
+            grantAccessRepository = new GrantAccessRepository();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
     {
         try {
             accountRepository = new AccountRepository();
@@ -40,7 +49,9 @@ public class ControllerServlet extends HttpServlet {
             throw new RuntimeException(e);
         }
     }
-//  --------------------              load data Account and Role    ------------ ----------------------------------------
+
+
+    //  --------------------              load data Account and Role    ------------ ----------------------------------------
     public List<Account> loadAccount(HttpServletRequest req, HttpServletResponse resp) throws Exception {
         //                set data to jsp
         List<Account> acccountList = accountRepository.getAllAccount();
@@ -48,6 +59,13 @@ public class ControllerServlet extends HttpServlet {
         req.getRequestDispatcher("/listAccount.jsp")
                 .forward(req, resp);
         return null;
+    }
+    public List<GrantAccess> loadGrantAccess(HttpServletRequest req, HttpServletResponse resp)throws Exception {
+        List<GrantAccess> grantAccess = GrantAccessRepository.getAllGranAScc();
+        req.setAttribute("listGrantAcc", grantAccess );
+        req.getRequestDispatcher("/listGrantAccount.jsp")
+                .forward(req, resp);
+        return  null;
     }
     public List<Role> loadRole(HttpServletRequest req, HttpServletResponse resp) throws SQLException, ServletException, IOException {
         //                get data
@@ -148,6 +166,14 @@ public class ControllerServlet extends HttpServlet {
             try {
                 loadRole(req, resp);
             } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        if(action.equals("listGrantAccount")){
+            try {
+                loadGrantAccess(req, resp);
+
+            }catch (Exception e) {
                 throw new RuntimeException(e);
             }
         }

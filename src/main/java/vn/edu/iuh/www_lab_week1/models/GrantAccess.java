@@ -1,19 +1,17 @@
 package vn.edu.iuh.www_lab_week1.models;
 
-import vn.edu.iuh.www_lab_week1.repositories.GrantAccessRepository;
-
 public class GrantAccess{
     private String role_id;
     private String account_id;
     private String note;
 
-    private Grant is_grant;
+    private int is_grant;
 
-    public Grant getIs_grant() {
+    public int getIs_grant() {
         return is_grant;
     }
 
-    public void setIs_grant(Grant is_grant) {
+    public void setIs_grant(int is_grant) {
         this.is_grant = is_grant;
     }
 
@@ -27,7 +25,7 @@ public class GrantAccess{
                 '}';
     }
 
-    public GrantAccess(String role_id, String account_id, String note, Grant is_grant) {
+    public GrantAccess(String role_id, String account_id, String note, int is_grant) {
         this.role_id = role_id;
         this.account_id = account_id;
         this.note = note;
