@@ -29,6 +29,11 @@ Trang đăng nhập:
 
  ![image](https://github.com/NguyenHoangThai0204/www_lab_week1_20009931_NguyenHoangThai/assets/98085097/d6edd133-3360-420d-a5d8-58e2daa336b7)
 
+ Add:
+
+ ![image](https://github.com/NguyenHoangThai0204/www_lab_week1_20009931_NguyenHoangThai/assets/98085097/fe23c63e-aab4-4d7d-ab4b-7c342f70c353)
+
+
 
 
  
