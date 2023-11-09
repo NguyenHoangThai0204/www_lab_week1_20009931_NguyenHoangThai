@@ -20,6 +20,16 @@ Trang đăng nhập:
 
  ![image](https://github.com/NguyenHoangThai0204/www_lab_week1_20009931_NguyenHoangThai/assets/98085097/2da46067-9a4e-4b78-bd71-c17f2fb28c21)
 
+ List Account:
+
+ ![image](https://github.com/NguyenHoangThai0204/www_lab_week1_20009931_NguyenHoangThai/assets/98085097/2453f934-6569-4c3e-a398-e85d91894901)
+
+
+ List Role:
+
+ ![image](https://github.com/NguyenHoangThai0204/www_lab_week1_20009931_NguyenHoangThai/assets/98085097/d6edd133-3360-420d-a5d8-58e2daa336b7)
+
+
 
  
 
